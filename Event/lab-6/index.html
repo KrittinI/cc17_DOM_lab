@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- จงสร้าง Button มีข้อความว่า “Click to hide me”
+เมื่อผู้ใช้ click button ให้ซ่อน button -->
+    <button id="hideMe">Click hide me</button>
+    <script>
+        const hideMe = document.getElementById("hideMe")
+
+        console.log(hideMe.style.display)
+        const hide = (event) => {
+            event.target.style.display = "none"
+
+        }
+        hideMe.addEventListener("click", hide)
+    </script>
+</body>
+
+</html>

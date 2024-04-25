@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn3 {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn">Submit</button>
+    <button class="btn2">Submit</button>
+    <script>
+        let btn = document.getElementsByClassName("btn")[0]
+        let btn2 = document.getElementsByClassName("btn2")[0]
+        setTimeout(() => btn.style.backgroundColor = "red", 3000)
+        setTimeout(() => btn.style.backgroundColor = "", 6000)
+        setTimeout(() => btn2.classList.toggle("btn3"), 9000)
+        setTimeout(() => btn2.classList.toggle("btn3"), 12000)
+    </script>
+</body>
+
+</html>

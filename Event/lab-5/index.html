@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- จงสร้าง <input> และมี attribute ชื่อ name มีค่าเท่ากับ “nickname”
+    จงสร้าง <input> อีกอันให้มี attribute ชื่อ name มีค่าเท่ากับ “job”
+    เมื่อผู้ใช้ click ที่ <input> ให้ console.log ค่า attribute name ของ <input>
+    เมื่อผู้ใช้พิมพ์ค่าลงใน <input> ให้ console.log ค่าที่ผู้ใช้พิมพ์
+    Hint: event.target และ oninput event -->
+    <input type="text" placeholder="nickname" id="nickname">
+    <input type="text" placeholder="job" id="job">
+
+    <script>
+        const nickname = document.getElementById("nickname")
+        const job = document.getElementById("job")
+
+        const printName = (event) => {
+            console.log(event.target.id)
+        }
+        const printLog = (event) => {
+            console.log(event.target.value)
+        }
+
+        nickname.addEventListener("click", printName)
+        nickname.addEventListener("input", printLog)
+        job.onclick = printName
+        job.oninput = printLog
+    </script>
+
+
+
+</body>
+
+</html>

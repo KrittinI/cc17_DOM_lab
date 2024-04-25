@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- จงสร้าง Button มีข้อความว่า “Hide”
+เมื่อผู้ใช้ click button ให้ซ่อนข้อความและเปลี่ยนข้อความบน Button เป็น “Show” เมื่อ click button
+อีกครั้งให้แสดงข้อความและเปลี่ยนข้อความบน Button เป็น Hide -->
+    <button id="btn">Hide</button>
+    <h1>Lorem ipsum dolor sit.</h1>
+
+    <script>
+        const btn = document.getElementById("btn")
+        const h1 = document.getElementsByTagName("h1")[0]
+
+
+        const hidding = () => {
+            if (h1.style.display != "none") {
+                btn.textContent = "Show"
+                h1.style.display = "none"
+            } else {
+                btn.textContent = "Hide"
+                h1.style.display = "block"
+            }
+        }
+        btn.addEventListener("click", hidding)
+    </script>
+</body>
+
+</html>

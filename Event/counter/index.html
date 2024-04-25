@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="decrement">-</button>
+    <span>1</span>
+    <button id="increment">+</button>
+    <script>
+        let max = 10;
+        let min = 0;
+        const decrementBtn = document.getElementById("decrement");
+        const incrementBtn = document.getElementById("increment");
+        const count = document.querySelector("span")
+
+        incrementBtn.addEventListener("click", function () {
+            if (count.textContent == max) return
+            count.textContent++;
+        })
+        decrementBtn.addEventListener("click", function () {
+            if (count.textContent == min) return
+            count.textContent--;
+        })
+    </script>
+</body>
+
+</html>
